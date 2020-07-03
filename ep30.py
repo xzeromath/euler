@@ -11,6 +11,28 @@
 # 그렇다면, 각 자리 숫자를 5제곱해서 더했을 때 자기 자신이 되는 수들의 합은 얼마입니까?
 
 
+def myjud(myv):
+    """ 자연수를 입력받아 각 자리의 숫자를 5제곱해서 더한 것이 자신과 같은지를 확인하는 함수"""
+    mysum =0
+    for i in str(myv):
+        mysum = mysum + int(i)**5
+    return myv==mysum
+
+# 방법1
+myresult=[]
+
+for i in range(2,1000000):
+    if myjud(i):
+        myresult.append(i)
+print(myresult)
+
+# 방법2
+print(list(filter(myjud,range(2,1000000))))
+
+
+
+
+
 # 김현기t
 sol_list = []
 for i in range(2,1000000):
