@@ -31,6 +31,16 @@ for i in itertools.count(1):
         print(i)
         print(2*i,3*i,4*i,5*i,6*i)
         break
-        
+         
 # 142857
 # 285714 428571 571428 714285 857142
+
+k=0
+for i in itertools.count(1):
+    if dis(i):
+        print(i)
+        print(2*i,3*i,4*i,5*i,6*i)
+        k=k+1
+        if k==3:
+            break
+         
